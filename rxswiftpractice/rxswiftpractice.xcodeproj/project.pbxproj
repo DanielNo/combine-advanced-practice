@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561559DD1FB25A4400823EFC /* CountriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561559DC1FB25A4400823EFC /* CountriesViewModelTests.swift */; };
 		569D29511FA8E20300DD2432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29501FA8E20300DD2432 /* AppDelegate.swift */; };
 		569D29531FA8E20300DD2432 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29521FA8E20300DD2432 /* CountriesViewController.swift */; };
 		569D29551FA8E20300DD2432 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29541FA8E20300DD2432 /* SecondViewController.swift */; };
 		569D29581FA8E20300DD2432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569D29561FA8E20300DD2432 /* Main.storyboard */; };
 		569D295A1FA8E20300DD2432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569D29591FA8E20300DD2432 /* Assets.xcassets */; };
 		569D295D1FA8E20300DD2432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569D295B1FA8E20300DD2432 /* LaunchScreen.storyboard */; };
-		569D29681FA8E20400DD2432 /* rxswiftpracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29671FA8E20400DD2432 /* rxswiftpracticeTests.swift */; };
 		569D29731FA8E20400DD2432 /* rxswiftpracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29721FA8E20400DD2432 /* rxswiftpracticeUITests.swift */; };
 		569D29821FA90FFB00DD2432 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29801FA90FFB00DD2432 /* TextTableViewCell.swift */; };
 		569D29831FA90FFB00DD2432 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569D29811FA90FFB00DD2432 /* TextTableViewCell.xib */; };
@@ -48,6 +48,7 @@
 		1B588AA4E9DFE366A1E43975 /* Pods_rxswiftpracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxswiftpracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2389A9F500979904F1DFF0 /* Pods-rxswiftpractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxswiftpractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxswiftpractice/Pods-rxswiftpractice.debug.xcconfig"; sourceTree = "<group>"; };
 		4E66EEA64707726542679F32 /* Pods-rxswiftpracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxswiftpracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxswiftpracticeUITests/Pods-rxswiftpracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		561559DC1FB25A4400823EFC /* CountriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModelTests.swift; sourceTree = "<group>"; };
 		569D294D1FA8E20300DD2432 /* rxswiftpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxswiftpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		569D29501FA8E20300DD2432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		569D29521FA8E20300DD2432 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		569D295C1FA8E20300DD2432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		569D295E1FA8E20300DD2432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569D29631FA8E20400DD2432 /* rxswiftpracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rxswiftpracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		569D29671FA8E20400DD2432 /* rxswiftpracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxswiftpracticeTests.swift; sourceTree = "<group>"; };
 		569D29691FA8E20400DD2432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569D296E1FA8E20400DD2432 /* rxswiftpracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rxswiftpracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		569D29721FA8E20400DD2432 /* rxswiftpracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxswiftpracticeUITests.swift; sourceTree = "<group>"; };
@@ -174,8 +174,8 @@
 		569D29661FA8E20400DD2432 /* rxswiftpracticeTests */ = {
 			isa = PBXGroup;
 			children = (
-				569D29671FA8E20400DD2432 /* rxswiftpracticeTests.swift */,
 				569D29691FA8E20400DD2432 /* Info.plist */,
+				561559DC1FB25A4400823EFC /* CountriesViewModelTests.swift */,
 			);
 			path = rxswiftpracticeTests;
 			sourceTree = "<group>";
@@ -475,9 +475,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rxswiftpracticeTests/Pods-rxswiftpracticeTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -521,7 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569D29681FA8E20400DD2432 /* rxswiftpracticeTests.swift in Sources */,
+				561559DD1FB25A4400823EFC /* CountriesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

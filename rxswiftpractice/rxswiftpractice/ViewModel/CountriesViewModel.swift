@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-public class CountriesViewModel{
+class CountriesViewModel{
     
     let countryData : Variable<[String]> = {
         do {

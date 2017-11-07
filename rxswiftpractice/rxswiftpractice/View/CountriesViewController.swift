@@ -47,14 +47,7 @@ extension CountriesViewController{
             .subscribe(onNext: { (query) in
                 self.viewModel.searchText(searchText: query)
                 print(query)
-                    
-            }, onError: { (err) in
-                
-            }, onCompleted: {
-                
-            }) {
-                
-        }
+            }).disposed(by: disposeBag)
 
     }
     
