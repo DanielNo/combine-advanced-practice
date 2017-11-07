@@ -7,51 +7,68 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class FirstViewController: UIViewController {
     
     let viewModel = FirstViewModel()
-
+    var disposeBag = DisposeBag()
+    
     @IBOutlet weak var tableView: UITableView!{
         didSet{
             let nib = UINib(nibName: "TextTableViewCell", bundle: nil)
-            tableView.register(nib, forCellReuseIdentifier: "textCell")
+            tableView.register(nib, forCellReuseIdentifier: textCellIdentifier)
+            
         }
     }
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let textCellIdentifier = "textCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        self.setupSearchBarObserver()
+        self.setupTableViewObserver()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
-extension FirstViewController : UITableViewDelegate, UITableViewDataSource {
+extension FirstViewController{
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : TextTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "textCell") as! TextTableViewCell
-        cell.textLbl.text = viewModel.countryData[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rows = viewModel.countryData.count
-        return rows
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        let sections = viewModel.countryData.count > 0 ? viewModel.countryData.count : 0
-        return sections
-    }
-}
+    func setupSearchBarObserver(){
+        searchBar
+            .rx.text
+            .orEmpty
+            .subscribe(onNext: { (query) in
+                self.viewModel.countryData.asObservable().map{
+                    $0.filter { $0.contains(query) }
+                }
+                    .bind(to: self.viewModel.shownCountryData)
+                print(query)
+                    
+            }, onError: { (err) in
+                
+            }, onCompleted: {
+                
+            }) {
+                
+        }
 
-extension FirstViewController : UISearchBarDelegate{
+    }
     
+    func setupTableViewObserver(){
+        viewModel.shownCountryData.asObservable().bind(to: tableView.rx.items(cellIdentifier: textCellIdentifier, cellType: TextTableViewCell.self)){ (row,element,cell) in
+            print("row : \(row)")
+            print(element)
+            cell.textLbl.text = element
+            
+        }.disposed(by: disposeBag)
+
+    }
+
 }

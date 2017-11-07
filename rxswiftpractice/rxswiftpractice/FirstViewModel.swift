@@ -7,19 +7,22 @@
 //
 
 import Foundation
+import RxSwift
 
-public struct FirstViewModel{
+public class FirstViewModel{
     
-    let countryData : [String] = {
+    let countryData : Variable<[String]> = {
         do {
             if let path = Bundle.main.path(forResource: "countries", ofType: "txt"){
                 let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
-                return data.components(separatedBy: "\n")
+                return Variable(data.components(separatedBy: "\n"))
             }
         } catch let err as NSError {
             print("file error : \(err)")
         }
-        return []
+        return Variable([])
     }()
+    
+    var shownCountryData = Variable<[String]>([])
     
 }
