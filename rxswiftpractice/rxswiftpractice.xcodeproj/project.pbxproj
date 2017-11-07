@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		569D29511FA8E20300DD2432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29501FA8E20300DD2432 /* AppDelegate.swift */; };
-		569D29531FA8E20300DD2432 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29521FA8E20300DD2432 /* FirstViewController.swift */; };
+		569D29531FA8E20300DD2432 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29521FA8E20300DD2432 /* CountriesViewController.swift */; };
 		569D29551FA8E20300DD2432 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29541FA8E20300DD2432 /* SecondViewController.swift */; };
 		569D29581FA8E20300DD2432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569D29561FA8E20300DD2432 /* Main.storyboard */; };
 		569D295A1FA8E20300DD2432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569D29591FA8E20300DD2432 /* Assets.xcassets */; };
@@ -17,7 +17,7 @@
 		569D29731FA8E20400DD2432 /* rxswiftpracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29721FA8E20400DD2432 /* rxswiftpracticeUITests.swift */; };
 		569D29821FA90FFB00DD2432 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29801FA90FFB00DD2432 /* TextTableViewCell.swift */; };
 		569D29831FA90FFB00DD2432 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569D29811FA90FFB00DD2432 /* TextTableViewCell.xib */; };
-		569D29871FA927A900DD2432 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29861FA927A900DD2432 /* FirstViewModel.swift */; };
+		569D29871FA927A900DD2432 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29861FA927A900DD2432 /* CountriesViewModel.swift */; };
 		569D298B1FA93E6800DD2432 /* countries.txt in Resources */ = {isa = PBXBuildFile; fileRef = 569D298A1FA93E6800DD2432 /* countries.txt */; };
 		63A12AF88922F4A723B582B5 /* Pods_rxswiftpracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B588AA4E9DFE366A1E43975 /* Pods_rxswiftpracticeUITests.framework */; };
 		80C4AE8E70C88EFE5D3DD4D2 /* Pods_rxswiftpractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA170C9EE4FD49FB5EFEB71 /* Pods_rxswiftpractice.framework */; };
@@ -50,7 +50,7 @@
 		4E66EEA64707726542679F32 /* Pods-rxswiftpracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxswiftpracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxswiftpracticeUITests/Pods-rxswiftpracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		569D294D1FA8E20300DD2432 /* rxswiftpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxswiftpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		569D29501FA8E20300DD2432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		569D29521FA8E20300DD2432 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		569D29521FA8E20300DD2432 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		569D29541FA8E20300DD2432 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		569D29571FA8E20300DD2432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		569D29591FA8E20300DD2432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		569D29741FA8E20400DD2432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569D29801FA90FFB00DD2432 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		569D29811FA90FFB00DD2432 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
-		569D29861FA927A900DD2432 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
+		569D29861FA927A900DD2432 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		569D298A1FA93E6800DD2432 /* countries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countries.txt; sourceTree = "<group>"; };
 		648ACAF9FD9F45D73D3D8BBA /* Pods_rxswiftpracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxswiftpracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0E7C8D7ACCF63D31AF7D02 /* Pods-rxswiftpracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxswiftpracticeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rxswiftpracticeTests/Pods-rxswiftpracticeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				569D29501FA8E20300DD2432 /* AppDelegate.swift */,
-				569D29521FA8E20300DD2432 /* FirstViewController.swift */,
+				569D29521FA8E20300DD2432 /* CountriesViewController.swift */,
 				569D29541FA8E20300DD2432 /* SecondViewController.swift */,
 				569D29561FA8E20300DD2432 /* Main.storyboard */,
 				569D29591FA8E20300DD2432 /* Assets.xcassets */,
@@ -133,7 +133,7 @@
 				569D295E1FA8E20300DD2432 /* Info.plist */,
 				569D29801FA90FFB00DD2432 /* TextTableViewCell.swift */,
 				569D29811FA90FFB00DD2432 /* TextTableViewCell.xib */,
-				569D29861FA927A900DD2432 /* FirstViewModel.swift */,
+				569D29861FA927A900DD2432 /* CountriesViewModel.swift */,
 				569D298A1FA93E6800DD2432 /* countries.txt */,
 			);
 			path = rxswiftpractice;
@@ -478,10 +478,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				569D29551FA8E20300DD2432 /* SecondViewController.swift in Sources */,
-				569D29871FA927A900DD2432 /* FirstViewModel.swift in Sources */,
+				569D29871FA927A900DD2432 /* CountriesViewModel.swift in Sources */,
 				569D29511FA8E20300DD2432 /* AppDelegate.swift in Sources */,
 				569D29821FA90FFB00DD2432 /* TextTableViewCell.swift in Sources */,
-				569D29531FA8E20300DD2432 /* FirstViewController.swift in Sources */,
+				569D29531FA8E20300DD2432 /* CountriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

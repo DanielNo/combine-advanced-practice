@@ -1,5 +1,5 @@
 //
-//  FirstViewModel.swift
+//  CountriesViewModel.swift
 //  rxswiftpractice
 //
 //  Created by Daniel No on 10/31/17.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-public class FirstViewModel{
+public class CountriesViewModel{
     
     let countryData : Variable<[String]> = {
         do {
@@ -24,5 +24,13 @@ public class FirstViewModel{
     }()
     
     var shownCountryData = Variable<[String]>([])
+    
+    func searchText(searchText : String){
+        self.countryData.asObservable().map{
+            $0.filter {
+                return searchText.count == 0 ? true : $0.lowercased().contains(searchText.lowercased())
+            }}
+            .bind(to: self.shownCountryData)
+    }
     
 }

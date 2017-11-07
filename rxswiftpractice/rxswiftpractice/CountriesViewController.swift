@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  CountriesViewController.swift
 //  rxswiftpractice
 //
 //  Created by Daniel No on 10/31/17.
@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FirstViewController: UIViewController {
+class CountriesViewController: UIViewController {
     
-    let viewModel = FirstViewModel()
+    let viewModel = CountriesViewModel()
     var disposeBag = DisposeBag()
     
     @IBOutlet weak var tableView: UITableView!{
@@ -38,19 +38,14 @@ class FirstViewController: UIViewController {
     }
 }
 
-extension FirstViewController{
+extension CountriesViewController{
     
     func setupSearchBarObserver(){
         searchBar
             .rx.text
             .orEmpty
             .subscribe(onNext: { (query) in
-                self.viewModel.countryData.asObservable().map{
-                    $0.filter {
-                        return query.count == 0 ? true : $0.lowercased().contains(query.lowercased())
-                    }
-                }
-                    .bind(to: self.viewModel.shownCountryData)
+                self.viewModel.searchText(searchText: query)
                 print(query)
                     
             }, onError: { (err) in
@@ -65,10 +60,7 @@ extension FirstViewController{
     
     func setupTableViewObserver(){
         viewModel.shownCountryData.asObservable().bind(to: tableView.rx.items(cellIdentifier: textCellIdentifier, cellType: TextTableViewCell.self)){ (row,element,cell) in
-            print("row : \(row)")
-            print(element)
             cell.textLbl.text = element
-            
         }.disposed(by: disposeBag)
 
     }
