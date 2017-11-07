@@ -99,6 +99,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561559D71FB253EA00823EFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				569D29521FA8E20300DD2432 /* CountriesViewController.swift */,
+				569D29541FA8E20300DD2432 /* SecondViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		561559D81FB253F900823EFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				569D29861FA927A900DD2432 /* CountriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		561559DA1FB2541B00823EFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		561559DB1FB2543900823EFC /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				569D29801FA90FFB00DD2432 /* TextTableViewCell.swift */,
+				569D29811FA90FFB00DD2432 /* TextTableViewCell.xib */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
 		569D29441FA8E20300DD2432 = {
 			isa = PBXGroup;
 			children = (
@@ -124,16 +157,15 @@
 		569D294F1FA8E20300DD2432 /* rxswiftpractice */ = {
 			isa = PBXGroup;
 			children = (
+				561559DB1FB2543900823EFC /* User Interface */,
+				561559DA1FB2541B00823EFC /* Model */,
+				561559D81FB253F900823EFC /* ViewModel */,
+				561559D71FB253EA00823EFC /* View */,
 				569D29501FA8E20300DD2432 /* AppDelegate.swift */,
-				569D29521FA8E20300DD2432 /* CountriesViewController.swift */,
-				569D29541FA8E20300DD2432 /* SecondViewController.swift */,
 				569D29561FA8E20300DD2432 /* Main.storyboard */,
 				569D29591FA8E20300DD2432 /* Assets.xcassets */,
 				569D295B1FA8E20300DD2432 /* LaunchScreen.storyboard */,
 				569D295E1FA8E20300DD2432 /* Info.plist */,
-				569D29801FA90FFB00DD2432 /* TextTableViewCell.swift */,
-				569D29811FA90FFB00DD2432 /* TextTableViewCell.xib */,
-				569D29861FA927A900DD2432 /* CountriesViewModel.swift */,
 				569D298A1FA93E6800DD2432 /* countries.txt */,
 			);
 			path = rxswiftpractice;
