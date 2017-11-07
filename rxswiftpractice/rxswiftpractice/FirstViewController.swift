@@ -46,7 +46,9 @@ extension FirstViewController{
             .orEmpty
             .subscribe(onNext: { (query) in
                 self.viewModel.countryData.asObservable().map{
-                    $0.filter { $0.contains(query) }
+                    $0.filter {
+                        return query.count == 0 ? true : $0.lowercased().contains(query.lowercased())
+                    }
                 }
                     .bind(to: self.viewModel.shownCountryData)
                 print(query)
