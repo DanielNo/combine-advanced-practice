@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		561559DD1FB25A4400823EFC /* CountriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561559DC1FB25A4400823EFC /* CountriesViewModelTests.swift */; };
+		566A6CDB1FB8F4CE00C64D65 /* ReactiveGreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566A6CDA1FB8F4CE00C64D65 /* ReactiveGreetingViewController.swift */; };
 		569D29511FA8E20300DD2432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29501FA8E20300DD2432 /* AppDelegate.swift */; };
 		569D29531FA8E20300DD2432 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29521FA8E20300DD2432 /* CountriesViewController.swift */; };
-		569D29551FA8E20300DD2432 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D29541FA8E20300DD2432 /* SecondViewController.swift */; };
 		569D29581FA8E20300DD2432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569D29561FA8E20300DD2432 /* Main.storyboard */; };
 		569D295A1FA8E20300DD2432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569D29591FA8E20300DD2432 /* Assets.xcassets */; };
 		569D295D1FA8E20300DD2432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569D295B1FA8E20300DD2432 /* LaunchScreen.storyboard */; };
@@ -49,10 +49,10 @@
 		4A2389A9F500979904F1DFF0 /* Pods-rxswiftpractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxswiftpractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxswiftpractice/Pods-rxswiftpractice.debug.xcconfig"; sourceTree = "<group>"; };
 		4E66EEA64707726542679F32 /* Pods-rxswiftpracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxswiftpracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rxswiftpracticeUITests/Pods-rxswiftpracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		561559DC1FB25A4400823EFC /* CountriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModelTests.swift; sourceTree = "<group>"; };
+		566A6CDA1FB8F4CE00C64D65 /* ReactiveGreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveGreetingViewController.swift; sourceTree = "<group>"; };
 		569D294D1FA8E20300DD2432 /* rxswiftpractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxswiftpractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		569D29501FA8E20300DD2432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		569D29521FA8E20300DD2432 /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
-		569D29541FA8E20300DD2432 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		569D29571FA8E20300DD2432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		569D29591FA8E20300DD2432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		569D295C1FA8E20300DD2432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				569D29521FA8E20300DD2432 /* CountriesViewController.swift */,
-				569D29541FA8E20300DD2432 /* SecondViewController.swift */,
+				566A6CDA1FB8F4CE00C64D65 /* ReactiveGreetingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -514,7 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569D29551FA8E20300DD2432 /* SecondViewController.swift in Sources */,
+				566A6CDB1FB8F4CE00C64D65 /* ReactiveGreetingViewController.swift in Sources */,
 				569D29871FA927A900DD2432 /* CountriesViewModel.swift in Sources */,
 				569D29511FA8E20300DD2432 /* AppDelegate.swift in Sources */,
 				569D29821FA90FFB00DD2432 /* TextTableViewCell.swift in Sources */,
