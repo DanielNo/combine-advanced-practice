@@ -20,6 +20,7 @@ class CountriesViewController: UIViewController {
         didSet{
             let nib = UINib(nibName: "TextTableViewCell", bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: textCellIdentifier)
+            tableView.rowHeight = 60.0
         }
     }
     @IBOutlet weak var searchBar: UISearchBar!

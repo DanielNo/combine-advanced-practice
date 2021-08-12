@@ -34,10 +34,14 @@ class CountriesViewModel{
     }
 
     private func setupSubs(){
-        searchTerm.filter({ str in
-            str.count > 0
-        }).sink {[unowned self] term in
+        searchTerm.receive(on: RunLoop.main).sink {[unowned self] term in
             print("searched : \(term)")
+            if term.count == 0{
+                self.shownCountryData = countryData
+                return
+            }
+            
+            
             self.shownCountryData = countryData.filter({ str in
                 str.contains(term)
             })
