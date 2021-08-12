@@ -8,29 +8,39 @@
 
 import Foundation
 //import RxSwift
+import Combine
 
 class CountriesViewModel{
     
-//    let countryData : Variable<[String]> = {
-//        do {
-//            if let path = Bundle.main.path(forResource: "countries", ofType: "txt"){
-//                let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
-//                return Variable(data.components(separatedBy: "\n"))
-//            }
-//        } catch let err as NSError {
-//            print("file error : \(err)")
-//        }
-//        return Variable([])
-//    }()
+    var countryData : [String] = {
+        do {
+            if let path = Bundle.main.path(forResource: "countries", ofType: "txt"){
+                let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
+                let comps = data.components(separatedBy: "\n")
+                return comps            }
+        } catch let err as NSError {
+            print("file error : \(err)")
+        }
+        return []
+    }()
+    var subs : Set<AnyCancellable> = Set()
     
-//    var shownCountryData = Variable<[String]>([])
+    @Published var shownCountryData : [String] = []
+    lazy var searchTerm : CurrentValueSubject<String,Never> = CurrentValueSubject("")
     
-    func searchText(searchText : String){
-//        self.countryData.asObservable().map{
-//            $0.filter {
-//                return searchText.count == 0 ? true : $0.lowercased().contains(searchText.lowercased())
-//            }}
-//            .bind(to: self.shownCountryData)
+    init() {
+        shownCountryData = countryData
+        self.setupSubs()
+    }
+
+    private func setupSubs(){
+        searchTerm.sink {[unowned self] term in
+            print("searched : \(term)")
+            self.shownCountryData = countryData.filter({ str in
+                str.contains(term)
+            })
+        }.store(in: &subs)
+
     }
     
 }
