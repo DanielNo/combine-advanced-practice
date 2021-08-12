@@ -7,19 +7,18 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+import Combine
 
 class ReactiveGreetingViewController: UIViewController {
 
     @IBOutlet weak var textLbl: UILabel!
     @IBOutlet weak var promptTextField: UITextField!
-    let disposeBag = DisposeBag()
+//    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        promptTextField.rx.text.map {return ($0?.count == 0) ? "Enter your name" : "Hello \($0!)" }
-            .bind(to: textLbl.rx.text).disposed(by: disposeBag)
+//        promptTextField.rx.text.map {return ($0?.count == 0) ? "Enter your name" : "Hello \($0!)" }
+//            .bind(to: textLbl.rx.text).disposed(by: disposeBag)
 
 
     }

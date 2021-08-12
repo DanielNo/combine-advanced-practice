@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+import Combine
 
 class CountriesViewController: UIViewController {
     
     let viewModel = CountriesViewModel()
-    var disposeBag = DisposeBag()
+//    var disposeBag = DisposeBag()
     
     @IBOutlet weak var tableView: UITableView!{
         didSet{
@@ -41,20 +40,20 @@ class CountriesViewController: UIViewController {
 extension CountriesViewController{
     
     func setupSearchBarObserver(){
-        searchBar
-            .rx.text
-            .orEmpty
-            .subscribe(onNext: { (query) in
-                self.viewModel.searchText(searchText: query)
-                print(query)
-            }).disposed(by: disposeBag)
+//        searchBar
+//            .rx.text
+//            .orEmpty
+//            .subscribe(onNext: { (query) in
+//                self.viewModel.searchText(searchText: query)
+//                print(query)
+//            }).disposed(by: disposeBag)
 
     }
     
     func setupTableViewObserver(){
-        viewModel.shownCountryData.asObservable().bind(to: tableView.rx.items(cellIdentifier: textCellIdentifier, cellType: TextTableViewCell.self)){ (row,element,cell) in
-            cell.textLbl.text = element
-        }.disposed(by: disposeBag)
+//        viewModel.shownCountryData.asObservable().bind(to: tableView.rx.items(cellIdentifier: textCellIdentifier, cellType: TextTableViewCell.self)){ (row,element,cell) in
+//            cell.textLbl.text = element
+//        }.disposed(by: disposeBag)
 
     }
 
