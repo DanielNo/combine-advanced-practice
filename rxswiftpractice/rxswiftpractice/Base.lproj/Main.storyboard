@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,35 +18,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="87H-Ng-WdV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Cv-Wk-kFE"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sG8-9h-pBT">
-                                <rect key="frame" x="0.0" y="51" width="375" height="567"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Eum-41-xx2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="562"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lrR-dO-qlw">
+                                <rect key="frame" x="16" y="50" width="343" height="568"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="sG8-9h-pBT" secondAttribute="trailing" id="HvX-jo-AcN"/>
-                            <constraint firstItem="sG8-9h-pBT" firstAttribute="top" secondItem="87H-Ng-WdV" secondAttribute="bottom" id="PC0-0c-M6U"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="lrR-dO-qlw" secondAttribute="bottom" id="3ye-RA-YjM"/>
+                            <constraint firstItem="lrR-dO-qlw" firstAttribute="firstBaseline" secondItem="87H-Ng-WdV" secondAttribute="baseline" symbolType="layoutAnchor" id="7ip-0S-PhG"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="lrR-dO-qlw" secondAttribute="trailing" constant="16" id="CV1-pC-yq3"/>
                             <constraint firstItem="87H-Ng-WdV" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="Sdq-ht-SgQ"/>
                             <constraint firstItem="87H-Ng-WdV" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="UOU-Qj-ixp"/>
-                            <constraint firstItem="sG8-9h-pBT" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="djl-Hb-d3w"/>
+                            <constraint firstItem="lrR-dO-qlw" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="iSa-TJ-1ln"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="87H-Ng-WdV" secondAttribute="trailing" id="jEm-sz-mPU"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="sG8-9h-pBT" secondAttribute="bottom" id="mff-Fm-7iY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="searchBar" destination="87H-Ng-WdV" id="CZg-dt-fuV"/>
-                        <outlet property="tableView" destination="Eum-41-xx2" id="74v-TT-iRY"/>
+                        <outlet property="tableView" destination="lrR-dO-qlw" id="9dw-Pk-OkH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -124,6 +123,9 @@
         <image name="second" width="30" height="30"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

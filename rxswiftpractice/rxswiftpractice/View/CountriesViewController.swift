@@ -12,7 +12,6 @@ import Combine
 class CountriesViewController: UIViewController {
     
     let viewModel = CountriesViewModel()
-//    var disposeBag = DisposeBag()
     var subs : Set<AnyCancellable> = Set()
     
     var canc : AnyCancellable?
